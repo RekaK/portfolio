@@ -1,4 +1,5 @@
 import Nav from "../nav";
+import { Styled } from "./Hero.styles";
 
 interface HeroProps {
   image: string;
@@ -6,10 +7,10 @@ interface HeroProps {
 
 const Hero = () => {
   return (
-    <div>
+    <Styled.HeroContainer>
       <Nav />
-      <section>Hero</section>;
-    </div>
+      <section>Hero</section>
+    </Styled.HeroContainer>
   );
 };
 

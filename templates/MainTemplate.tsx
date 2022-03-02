@@ -1,5 +1,11 @@
+import Hero from "../components/hero";
+
 const MainTemplate = () => {
-  return <div>Main Template</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 };
 
 export default MainTemplate;
