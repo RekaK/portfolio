@@ -12,6 +12,7 @@ const NavLinkList = styled.ul({
   listStyle: "none",
   display: "flex",
   flexDirection: "row",
+  paddingLeft: "0"
 });
 
 const NavLink = styled.a({
