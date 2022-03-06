@@ -28,8 +28,15 @@ const SectionParagraph = styled.p({
   lineHeight: "22.50px",
 });
 
+const CardContainer = styled.div({
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr",
+  gridGap: "28px"
+});
+
 export const Styled = {
   Section,
   SectionTitle,
   SectionParagraph,
+  CardContainer,
 };
