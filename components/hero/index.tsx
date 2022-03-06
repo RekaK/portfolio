@@ -1,28 +1,26 @@
+import Image from "next/image";
 import Nav from "../nav";
 import { Styled } from "./Hero.styles";
 
-interface HeroProps {
+export interface HeroProps {
   image: string;
   title: string;
   subtitle: string;
-  spelling: string;
+  spelling?: string;
 }
 
-const Hero = () => {
+const Hero: React.FC<HeroProps> = ({ image, title, subtitle, spelling }) => {
   return (
     <Styled.HeroContainer>
       <Nav />
       <Styled.HeroSection>
-        <Styled.DummyImage></Styled.DummyImage>
+        <Image src={image} layout="fixed" objectFit="contain" alt="image" height={300} width={240} />
         <Styled.HeroTitleContainer>
           <Styled.HeroTitleBlock>
-
-          <Styled.HeroTitle>Réka</Styled.HeroTitle>
-          <Styled.HeroSpelling>(‘ray-kuh)</Styled.HeroSpelling>
+            <Styled.HeroTitle>{title}</Styled.HeroTitle>
+            {spelling && <Styled.HeroSpelling>{spelling}</Styled.HeroSpelling>}
           </Styled.HeroTitleBlock>
-          <Styled.HeroSubtitle>
-            Friendly neighborhood UX wizard
-          </Styled.HeroSubtitle>
+          <Styled.HeroSubtitle>{subtitle}</Styled.HeroSubtitle>
         </Styled.HeroTitleContainer>
       </Styled.HeroSection>
     </Styled.HeroContainer>

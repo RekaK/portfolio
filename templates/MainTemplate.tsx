@@ -1,10 +1,20 @@
-import Hero from "../components/hero";
-import { Styled } from "./MainTemplate.styles"
+import Hero, { HeroProps } from "../components/hero";
+import { Styled } from "./MainTemplate.styles";
 
-const MainTemplate: React.FC = ({ children }) => {
+interface MainTemplateProps {
+  hero: HeroProps;
+}
+
+const MainTemplate: React.FC<MainTemplateProps> = ({ children, hero }) => {
+  const { image, title, subtitle, spelling } = hero;
   return (
     <Styled.MainTemplate>
-      <Hero />
+      <Hero
+        image={image}
+        title={title}
+        subtitle={subtitle}
+        spelling={spelling}
+      />
       {children}
     </Styled.MainTemplate>
   );
