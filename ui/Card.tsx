@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Styled } from "./styles/Card.Styles";
 
@@ -31,6 +32,16 @@ const Card: React.FC<CardProps> = ({
         {subtitle && <Styled.CardSubtitle>{subtitle}</Styled.CardSubtitle>}
         <Styled.CardTitle>{title}</Styled.CardTitle>
         <Styled.CardText>{text}</Styled.CardText>
+        <Styled.NextArrow>
+          <Image
+            src="/icons/nextArrow.png"
+            alt="Next Arrow pointing Right."
+            height={20}
+            width={20}
+            objectFit="cover"
+            layout="fixed"
+          />
+        </Styled.NextArrow>
       </Styled.Card>
     </Link>
   );

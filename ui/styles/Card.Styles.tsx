@@ -24,7 +24,7 @@ const CardSubtitle = styled.h5({
   fontSize: "12px",
   lineHeight: "16x",
   maxWidth: "220px",
-  marginBottom: "6px"
+  marginBottom: "6px",
 });
 
 const CardTitle = styled.h4({
@@ -46,6 +46,11 @@ const CardText = styled.p({
   maxWidth: "220px",
 });
 
-const NextArrow = styled.div({});
+const NextArrow = styled.div({
+  position: "absolute",
+  content: `""`,
+  right: "14px",
+  bottom: "14px",
+});
 
-export const Styled = { Card, CardSubtitle, CardText, CardTitle };
+export const Styled = { Card, CardSubtitle, CardText, CardTitle, NextArrow };
