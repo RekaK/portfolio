@@ -1,10 +1,12 @@
 import Hero from "../components/hero";
+import { Styled } from "./MainTemplate.styles"
 
-const MainTemplate = () => {
+const MainTemplate: React.FC = ({ children }) => {
   return (
-    <div>
+    <Styled.MainTemplate>
       <Hero />
-    </div>
+      {children}
+    </Styled.MainTemplate>
   );
 };
 
