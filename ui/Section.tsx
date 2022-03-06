@@ -6,13 +6,23 @@ export interface ICardSection {
   cards: ICard[];
 }
 
+export interface IKeywordSection {
+  keywords: string[];
+}
+
 interface SectionProps {
   title: string;
   paragraph?: string;
   cardSection?: ICardSection;
+  keywordSection?: IKeywordSection;
 }
 
-const Section: React.FC<SectionProps> = ({ title, paragraph, cardSection }) => {
+const Section: React.FC<SectionProps> = ({
+  title,
+  paragraph,
+  cardSection,
+  keywordSection,
+}) => {
   return (
     <Styled.Section>
       <Styled.SectionTitle>{title}</Styled.SectionTitle>
@@ -34,6 +44,7 @@ const Section: React.FC<SectionProps> = ({ title, paragraph, cardSection }) => {
           ))}
         </Styled.CardContainer>
       )}
+      {keywordSection && <div></div>}
     </Styled.Section>
   );
 };
