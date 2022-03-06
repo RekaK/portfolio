@@ -6,9 +6,9 @@ import MainTemplate from "../templates/MainTemplate";
 const Home: NextPage = () => {
   const hero = {
     image: "/images/laptop.png",
-    title: "Reka",
+    title: "Réka",
     subtitle: "Friendly neighborhood UX wizard",
-    spelling: "‘ray-kuh)",
+    spelling: "(‘ray-kuh)",
   };
 
   return (

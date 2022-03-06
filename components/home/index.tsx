@@ -37,7 +37,21 @@ const cardSection: ICardSection = {
 
 const smallCardSection: ICardSection = {
   cardSize: "small",
+  flipColor: true,
   cards: smallCards,
+};
+
+const keywordSection = {
+  keywords: [
+    "usability",
+    "interaction design",
+    "user testing",
+    "",
+    "ui design",
+    "gamification",
+    "accessibility",
+    "ethical design",
+  ],
 };
 
 const HomeSection = () => {
@@ -50,6 +64,7 @@ const HomeSection = () => {
         />
         <Section title="Professional Works" cardSection={cardSection} />
         <Section title="Professional Works" cardSection={smallCardSection} />
+        <Section title="Keywords" keywordSection={keywordSection} />
       </Styled.MainContainer>
     </Styled.Main>
   );

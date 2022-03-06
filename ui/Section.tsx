@@ -1,8 +1,11 @@
 import Card, { ICard } from "./Card";
 import { Styled } from "./styles/Section.Styles";
+import { Styled as StyledKeywords } from "./styles/Keyword.Styles";
+import Keyword from "./Keyword";
 
 export interface ICardSection {
   cardSize: "small" | "large";
+  flipColor?: boolean;
   cards: ICard[];
 }
 
@@ -23,6 +26,8 @@ const Section: React.FC<SectionProps> = ({
   cardSection,
   keywordSection,
 }) => {
+  const colorIndex = cardSection?.flipColor ? 2 : 1
+
   return (
     <Styled.Section>
       <Styled.SectionTitle>{title}</Styled.SectionTitle>
@@ -38,13 +43,23 @@ const Section: React.FC<SectionProps> = ({
               subtitle={card.subtitle}
               text={card.text}
               size={cardSection.cardSize}
-              color={(index + 1) % 2 === 0 ? "pink" : "blue"}
+              color={(index + colorIndex) % 2 === 0 ? "pink" : "blue"}
               link={card.link}
             />
           ))}
         </Styled.CardContainer>
       )}
-      {keywordSection && <div></div>}
+      {keywordSection && (
+        <StyledKeywords.KeywordSection>
+          {keywordSection.keywords.map((keyword, index) => (
+            <Keyword
+              key={keyword}
+              text={keyword}
+              color={(index + 2) % 2 === 0 ? "pink" : "blue"}
+            />
+          ))}
+        </StyledKeywords.KeywordSection>
+      )}
     </Styled.Section>
   );
 };
