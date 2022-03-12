@@ -29,8 +29,14 @@ const CVParagraph = styled.p({
   marginBottom: "14px",
 });
 
+const CVArticleTitle = styled.h4({});
+
+const CVDate = styled.p({});
+
 export const Styled = {
   CVSection,
   CVParagraph,
   CVSectionTitle,
+  CVArticleTitle,
+  CVDate,
 };
