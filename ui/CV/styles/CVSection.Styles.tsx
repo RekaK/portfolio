@@ -61,8 +61,7 @@ const CVListColumn = styled.div({
   display: "flex",
   flexDirection: "column",
   marginRight: "80px",
-  
-})
+});
 
 const CVListContainer = styled.div({
   display: "flex",
@@ -91,10 +90,17 @@ const CVListTitle = styled.h5({
 
 const CVList = styled.ul({
   paddingLeft: 0,
-  listStyle: "none"
+  listStyle: "none",
 });
 
-const CVListElement = styled.li({});
+const CVListElement = styled.li({
+  fontFamily: "Noto Sans, sans-serif",
+  fontWeight: 400,
+  color: colors.darkBlue,
+  fontSize: "14px",
+  lineHeight: "22.50px",
+  marginBottom: "8px",
+});
 
 export const Styled = {
   CVSection,
