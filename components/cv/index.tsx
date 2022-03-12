@@ -2,6 +2,7 @@ import { Styled } from "../../templates/MainTemplate.styles";
 import { ICvArticle } from "../../ui/CV/CVArtice";
 import { ICVList } from "../../ui/CV/CvList";
 import CVSection from "../../ui/CV/CVSection";
+import Footer from "../footer";
 
 const timeLineArticles: ICvArticle[] = [
   {
@@ -80,6 +81,7 @@ const CVContent = () => {
         <CVSection title="Timeline" articles={timeLineArticles} />
         <CVSection title="Qualifications" articles={qualificationsArticles} />
         <CVSection title="Working Knowledge" lists={workingKnowledge} />
+        <Footer />
       </Styled.MainContainer>
     </Styled.Main>
   );
