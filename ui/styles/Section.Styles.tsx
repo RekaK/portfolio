@@ -1,8 +1,11 @@
 import styled from "@emotion/styled";
 import { colors } from "../../styles/variables";
-
 interface SectionTitleStyleProps {
   marginBottom?: number;
+}
+
+interface StickyNoteStyleProps {
+  rotate: number;
 }
 
 const Section = styled.section({
@@ -35,9 +38,36 @@ const CardContainer = styled.div({
   gridGap: "28px",
 });
 
+const StickyNote = styled.div<StickyNoteStyleProps>( props => ({
+  height: "100px",
+  width: "100px",
+  position: "relative",
+  marginBottom: "30px",
+  marginRight: "14px",
+  transform: `rotate(${props.rotate}deg)`,
+}));
+
+const StickyNoteLabel = styled.caption({
+  fontFamily: "Noto Sans, sans-serif",
+  fontWeight: 400,
+  fontSize: "14px",
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+});
+
+const StickyNoteContainer = styled.div({
+  display: "flex",
+  flexWrap: "wrap",
+});
+
 export const Styled = {
   Section,
   SectionTitle,
   SectionParagraph,
+  StickyNote,
   CardContainer,
+  StickyNoteLabel,
+  StickyNoteContainer,
 };

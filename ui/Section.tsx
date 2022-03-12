@@ -1,4 +1,5 @@
 import Card, { ICard } from "./Card";
+import Image from "next/image";
 import { Styled } from "./styles/Section.Styles";
 import { Styled as StyledKeywords } from "./styles/Keyword.Styles";
 import Keyword from "./Keyword";
@@ -18,6 +19,7 @@ interface SectionProps {
   paragraphs?: string[];
   cardSection?: ICardSection;
   keywordSection?: IKeywordSection;
+  stickyNotes?: string[];
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -25,15 +27,19 @@ const Section: React.FC<SectionProps> = ({
   paragraphs,
   cardSection,
   keywordSection,
+  stickyNotes,
 }) => {
-  const colorIndex = cardSection?.flipColor ? 2 : 1
+  const colorIndex = cardSection?.flipColor ? 2 : 1;
 
   return (
     <Styled.Section>
       <Styled.SectionTitle>{title}</Styled.SectionTitle>
-      {paragraphs && (
-       paragraphs.map((paragraph, index) => <Styled.SectionParagraph key={index}>{paragraph}</Styled.SectionParagraph>) 
-      )}
+      {paragraphs &&
+        paragraphs.map((paragraph, index) => (
+          <Styled.SectionParagraph key={index}>
+            {paragraph}
+          </Styled.SectionParagraph>
+        ))}
       {cardSection && (
         <Styled.CardContainer>
           {cardSection.cards.map((card, index) => (
@@ -48,6 +54,21 @@ const Section: React.FC<SectionProps> = ({
             />
           ))}
         </Styled.CardContainer>
+      )}
+      {stickyNotes && (
+        <Styled.StickyNoteContainer>
+          {stickyNotes.map((label) => (
+            <Styled.StickyNote key={label} rotate={Math.random() * 10 - 5}>
+              <Image
+                src="/stickyNotes/stickyNote.png"
+                alt="Sticky Note"
+                height={100}
+                width={100}
+              />
+              <Styled.StickyNoteLabel>{label}</Styled.StickyNoteLabel>
+            </Styled.StickyNote>
+          ))}
+        </Styled.StickyNoteContainer>
       )}
       {keywordSection && (
         <StyledKeywords.KeywordSection>

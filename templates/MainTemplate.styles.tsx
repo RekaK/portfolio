@@ -6,6 +6,8 @@ const MainTemplate = styled.body({
 
 const Main = styled.main({
   width: "50vw",
+  height: "100vh",
+  overflow: "scroll",
 });
 
 const MainContainer = styled.div({

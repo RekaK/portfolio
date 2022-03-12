@@ -14,7 +14,8 @@ const AboutSection = () => {
             `I genuinely love challenges and games, both in and out of work. My hobbies include gaming, arts, and connecting with nature via hikes, on which I usually go with my camera. For my newest challenge, I’m learning to rollerskate.`,
           ]}
         />
-        <Section title="I strive to be:" />
+        <Section title="I strive to be:" 
+        stickyNotes={["curious", "hard-working", "friendly", "punctual", "communi-cative", "passionate", "humble", "honest"]}/>
       </Styled.MainContainer>
     </Styled.Main>
   );
