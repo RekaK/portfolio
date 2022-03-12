@@ -1,5 +1,6 @@
 import { Styled } from "../../templates/MainTemplate.styles";
 import { ICvArticle } from "../../ui/CV/CVArtice";
+import { ICVList } from "../../ui/CV/CvList";
 import CVSection from "../../ui/CV/CVSection";
 
 const timeLineArticles: ICvArticle[] = [
@@ -45,13 +46,40 @@ const qualificationsArticles: ICvArticle[] = [
   },
 ];
 
+const workingKnowledge: ICVList[] = [
+  {
+    title: "Software",
+    elements: [
+      "Figma",
+      "Sketch",
+      "Adobe XD",
+      "Photoshop",
+      "Illustrator",
+      "Miro",
+      "Zeplin",
+    ],
+  },
+  {
+    title: "Skills",
+    elements: [
+      "User Research",
+      "Usability & User Testing",
+      "Visual Design",
+      "Interactive Prototyping",
+      "Heuristic Evaluation",
+      "Affinity mapping",
+      "Workshops",
+    ],
+  },
+];
+
 const CVContent = () => {
   return (
     <Styled.Main>
       <Styled.MainContainer>
         <CVSection title="Timeline" articles={timeLineArticles} />
         <CVSection title="Qualifications" articles={qualificationsArticles} />
-        <CVSection title="Working Knowledge" />
+        <CVSection title="Working Knowledge" lists={workingKnowledge} />
       </Styled.MainContainer>
     </Styled.Main>
   );

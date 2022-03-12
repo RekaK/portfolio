@@ -57,10 +57,54 @@ const CVDate = styled.p({
   marginBottom: "8px",
 });
 
+const CVListColumn = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  marginRight: "80px",
+  
+})
+
+const CVListContainer = styled.div({
+  display: "flex",
+  flexDirection: "row",
+});
+
+const CVListTitle = styled.h5({
+  position: "relative",
+  display: "inline-block",
+  fontFamily: "Noto Sans, sans-serif",
+  fontWeight: 600,
+  fontSize: "18px",
+  color: colors.darkBlue,
+  lineHeight: "24.5px",
+  width: "140px",
+  "&::before": {
+    position: "absolute",
+    content: "''",
+    width: "calc(100% + 4px)",
+    top: 0,
+    bottom: "5px",
+    zIndex: -1,
+    backgroundColor: colors.lightBlue,
+  },
+});
+
+const CVList = styled.ul({
+  paddingLeft: 0,
+  listStyle: "none"
+});
+
+const CVListElement = styled.li({});
+
 export const Styled = {
   CVSection,
   CVParagraph,
   CVSectionTitle,
   CVArticleTitle,
   CVDate,
+  CVList,
+  CVListContainer,
+  CVListTitle,
+  CVListColumn,
+  CVListElement,
 };

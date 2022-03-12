@@ -1,12 +1,14 @@
 import CVArticle, { ICvArticle } from "./CVArtice";
+import CVList, { ICVList } from "./CvList";
 import { Styled } from "./styles/CVSection.Styles";
 
 interface SectionProps {
   title: string;
   articles?: ICvArticle[];
+  lists?: ICVList[];
 }
 
-const CVSection: React.FC<SectionProps> = ({ title, articles }) => {
+const CVSection: React.FC<SectionProps> = ({ title, articles, lists }) => {
   return (
     <Styled.CVSection>
       <Styled.CVSectionTitle>{title}</Styled.CVSectionTitle>
@@ -19,6 +21,7 @@ const CVSection: React.FC<SectionProps> = ({ title, articles }) => {
             date={article.date}
           />
         ))}
+      {lists && <CVList listColumns={lists} />}
     </Styled.CVSection>
   );
 };
