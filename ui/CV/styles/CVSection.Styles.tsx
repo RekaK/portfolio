@@ -29,9 +29,33 @@ const CVParagraph = styled.p({
   marginBottom: "14px",
 });
 
-const CVArticleTitle = styled.h4({});
+const CVArticleTitle = styled.h4({
+  position: "relative",
+  display: "inline-block",
+  fontFamily: "Noto Sans, sans-serif",
+  fontWeight: 600,
+  fontSize: "18px",
+  color: colors.darkBlue,
+  lineHeight: "24.5px",
+  "&::before": {
+    position: "absolute",
+    content: "''",
+    width: "calc(100% + 4px)",
+    top: 0,
+    bottom: "5px",
+    zIndex: -1,
+    backgroundColor: colors.lightBlue,
+  },
+});
 
-const CVDate = styled.p({});
+const CVDate = styled.p({
+  fontFamily: "Noto Sans, sans-serif",
+  fontWeight: 400,
+  color: colors.darkBlue,
+  fontSize: "14px",
+  lineHeight: "19px",
+  marginBottom: "8px",
+});
 
 export const Styled = {
   CVSection,
