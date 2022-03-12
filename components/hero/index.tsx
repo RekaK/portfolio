@@ -5,7 +5,7 @@ import { Styled } from "./Hero.styles";
 export interface HeroProps {
   image: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   spelling?: string;
 }
 
@@ -14,13 +14,20 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, spelling }) => {
     <Styled.HeroContainer>
       <Nav />
       <Styled.HeroSection>
-        <Image src={image} layout="fixed" objectFit="contain" alt="image" height={300} width={240} />
+        <Image
+          src={image}
+          layout="fixed"
+          objectFit="contain"
+          alt="image"
+          height={300}
+          width={240}
+        />
         <Styled.HeroTitleContainer>
           <Styled.HeroTitleBlock>
             <Styled.HeroTitle>{title}</Styled.HeroTitle>
             {spelling && <Styled.HeroSpelling>{spelling}</Styled.HeroSpelling>}
           </Styled.HeroTitleBlock>
-          <Styled.HeroSubtitle>{subtitle}</Styled.HeroSubtitle>
+          {subtitle && <Styled.HeroSubtitle>{subtitle}</Styled.HeroSubtitle>}
         </Styled.HeroTitleContainer>
       </Styled.HeroSection>
     </Styled.HeroContainer>

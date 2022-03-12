@@ -26,12 +26,13 @@ const SectionParagraph = styled.p({
   color: colors.darkBlue,
   fontSize: "14px",
   lineHeight: "22.50px",
+  marginBottom: "14px",
 });
 
 const CardContainer = styled.div({
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
-  gridGap: "28px"
+  gridGap: "28px",
 });
 
 export const Styled = {

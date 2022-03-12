@@ -15,14 +15,14 @@ export interface IKeywordSection {
 
 interface SectionProps {
   title: string;
-  paragraph?: string;
+  paragraphs?: string[];
   cardSection?: ICardSection;
   keywordSection?: IKeywordSection;
 }
 
 const Section: React.FC<SectionProps> = ({
   title,
-  paragraph,
+  paragraphs,
   cardSection,
   keywordSection,
 }) => {
@@ -31,8 +31,8 @@ const Section: React.FC<SectionProps> = ({
   return (
     <Styled.Section>
       <Styled.SectionTitle>{title}</Styled.SectionTitle>
-      {paragraph && (
-        <Styled.SectionParagraph>{paragraph}</Styled.SectionParagraph>
+      {paragraphs && (
+       paragraphs.map((paragraph, index) => <Styled.SectionParagraph key={index}>{paragraph}</Styled.SectionParagraph>) 
       )}
       {cardSection && (
         <Styled.CardContainer>
