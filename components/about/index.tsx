@@ -1,7 +1,7 @@
 import { Styled } from "../../templates/MainTemplate.styles";
 import Section from "../../ui/Section";
 
-const AboutSection = () => {
+const AboutContent = () => {
   return (
     <Styled.Main>
       <Styled.MainContainer>
@@ -41,4 +41,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default AboutContent;

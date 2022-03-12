@@ -8,6 +8,10 @@ interface StickyNoteStyleProps {
   rotate: number;
 }
 
+interface SectionParagraphProps {
+  fontSize?: number;
+}
+
 const Section = styled.section({
   marginBottom: "40px",
   maxWidth: "560px",
@@ -23,14 +27,14 @@ const SectionTitle = styled.h3<SectionTitleStyleProps>((props) => ({
   marginBottom: props.marginBottom ? `${props.marginBottom}px` : "20px",
 }));
 
-const SectionParagraph = styled.p({
+const SectionParagraph = styled.p<SectionParagraphProps>((props) => ({
   fontFamily: "Noto Sans, sans-serif",
   fontWeight: 400,
   color: colors.darkBlue,
-  fontSize: "14px",
+  fontSize: `${props.fontSize ?? 14}px`,
   lineHeight: "22.50px",
   marginBottom: "14px",
-});
+}));
 
 const CardContainer = styled.div({
   display: "grid",
@@ -38,7 +42,7 @@ const CardContainer = styled.div({
   gridGap: "28px",
 });
 
-const StickyNote = styled.div<StickyNoteStyleProps>( props => ({
+const StickyNote = styled.div<StickyNoteStyleProps>((props) => ({
   height: "100px",
   width: "100px",
   position: "relative",
