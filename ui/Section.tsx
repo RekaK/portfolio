@@ -20,6 +20,12 @@ interface SectionProps {
   cardSection?: ICardSection;
   keywordSection?: IKeywordSection;
   stickyNotes?: string[];
+  image?: {
+    src: string;
+    alt: string;
+    height: number;
+    width: number;
+  };
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -28,6 +34,7 @@ const Section: React.FC<SectionProps> = ({
   cardSection,
   keywordSection,
   stickyNotes,
+  image,
 }) => {
   const colorIndex = cardSection?.flipColor ? 2 : 1;
 
@@ -80,6 +87,14 @@ const Section: React.FC<SectionProps> = ({
             />
           ))}
         </StyledKeywords.KeywordSection>
+      )}
+      {image && (
+        <Image
+          src={image.src}
+          alt={image.alt}
+          height={image.height}
+          width={image.width}
+        />
       )}
     </Styled.Section>
   );
