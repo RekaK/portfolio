@@ -3,6 +3,18 @@ import Head from "next/head";
 import PassionProjectContent from "../../../components/passionProject";
 import MainTemplate from "../../../templates/MainTemplate";
 
+const images = [
+  { url: "/wizards/wizards0.png", alt: "Notion board for 35Wizards" },
+  { url: "/wizards/wizards1.png", alt: "Database plan for 35Wizards Backend" },
+  { url: "/wizards/wizards2.png", alt: "Logical flow of 35Wizards" },
+  { url: "/wizards/wizards3.png", alt: "Button states" },
+  {
+    url: "/wizards/wizards4.png",
+    alt: "Wireframe for character sheet management",
+  },
+  { url: "/wizards/wizards5.png", alt: "Diagram of D&D 3.5 ruleset" },
+];
+
 const About: NextPage = () => {
   const hero = {
     image: "/images/mobile.png",
@@ -27,7 +39,7 @@ const About: NextPage = () => {
               `We work remotely, in sprints. We use Notion and Miro to organise our work and we hold weekly early morning (before work!) meetings via Discord. I create designs in Figma. Below are some snippets of our work.`,
             ],
           }}
-          imageGallery={[""]}
+          imageGallery={images}
           buttonSection={{
             url: "",
             note: "(opens in a new window and is a bit loud!)",
