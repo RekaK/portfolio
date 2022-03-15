@@ -1,4 +1,6 @@
+import { useRouter } from "next/router";
 import { Styled } from "../../templates/MainTemplate.styles";
+import Button from "../../ui/Buttons/Button";
 import ImageGrid, { IImageObject } from "../../ui/ImageGrid";
 import Section from "../../ui/Section";
 import Footer from "../footer";
@@ -20,9 +22,18 @@ const PassionProjectContent: React.FC<PassionProjectContentProps> = ({
   imageGallery,
   buttonSection,
 }) => {
+  const router = useRouter();
+
   return (
     <Styled.Main>
       <Styled.MainContainer>
+        <Styled.BackButtonContainer>
+          <Button
+            label="back"
+            onClick={() => router.back()}
+            iconUrl={"/icons/backArrow.png"}
+          />
+        </Styled.BackButtonContainer>
         <Section
           title={mainSection.title}
           paragraphs={mainSection.paragraphs}

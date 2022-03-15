@@ -14,8 +14,13 @@ const MainContainer = styled.div({
   margin: "60px 80px",
 });
 
+const BackButtonContainer = styled.div({
+  marginBottom: "40px",
+});
+
 export const Styled = {
   MainTemplate,
   Main,
   MainContainer,
+  BackButtonContainer,
 };
