@@ -46,7 +46,6 @@ const keywordSection = {
     "usability",
     "interaction design",
     "user testing",
-    "",
     "ui design",
     "gamification",
     "accessibility",

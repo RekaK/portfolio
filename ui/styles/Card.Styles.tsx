@@ -15,6 +15,11 @@ const Card = styled.article<CardStyleProps>((props) => ({
   paddingRight: "24px",
   backgroundColor: props.color === "blue" ? colors.lightBlue : colors.pink,
   borderRadius: "5px",
+  cursor: "pointer",
+  transition: "all 0.1s ease-in",
+  "&:hover, &:focus": {
+    transform: "rotate(-2.5deg)"
+  } 
 }));
 
 const CardSubtitle = styled.h5({
