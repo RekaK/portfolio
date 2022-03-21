@@ -8,21 +8,26 @@ const NavContainer = styled.nav({
   paddingTop: "42px",
 });
 
+interface NavLinkStyleProps {
+  isActive: boolean;
+}
+
 const NavLinkList = styled.ul({
   listStyle: "none",
   display: "flex",
   flexDirection: "row",
-  paddingLeft: "0"
+  paddingLeft: "0",
 });
 
-const NavLink = styled.a({
+const NavLink = styled.a<NavLinkStyleProps>((props) => ({
   cursor: "pointer",
   color: colors.darkBlue,
   marginRight: "40px",
   fontSize: "18px",
   fontWeight: 600,
   fontFamily: "Source Code Pro, sans-serif",
-});
+  textDecoration: props.isActive ? "underline" : "none",
+}));
 
 export const Styled = {
   NavContainer,
