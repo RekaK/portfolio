@@ -14,7 +14,7 @@ const images = [
   },
 ];
 
-const About: NextPage = () => {
+const OneShotFridays: NextPage = () => {
   const hero = {
     image: "/images/planet.png",
     title: "Community",
@@ -24,7 +24,7 @@ const About: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>About</title>
+        <title>One Shot Fridays - Community Management</title>
         <meta
           name="description"
           content="Community Management - One Shot Friday"
@@ -49,4 +49,4 @@ const About: NextPage = () => {
   );
 };
 
-export default About;
+export default OneShotFridays;
