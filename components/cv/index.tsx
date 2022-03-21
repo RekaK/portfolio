@@ -1,4 +1,4 @@
-import { Styled } from "../../templates/MainTemplate.styles";
+import { Styled } from "../../templates/styles/MainTemplate.styles";
 import { ICvArticle } from "../../ui/CV/CVArtice";
 import { ICVList } from "../../ui/CV/CvList";
 import CVSection from "../../ui/CV/CVSection";

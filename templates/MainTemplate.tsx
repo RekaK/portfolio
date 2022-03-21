@@ -1,5 +1,5 @@
 import Hero, { HeroProps } from "../components/hero";
-import { Styled } from "./MainTemplate.styles";
+import { Styled } from "./styles/MainTemplate.styles";
 
 interface MainTemplateProps {
   hero: HeroProps;

@@ -1,15 +1,37 @@
+import { useRouter } from "next/router";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
+import Button from "../ui/Buttons/Button";
+import { Styled } from "./styles/ProjectTemplate.styles";
 
 const ProjectTemplate: React.FC = ({ children }) => {
+  const router = useRouter();
+
   return (
-    <div>
+    <Styled.Main>
       <Nav />
-      <div>Back button here</div>
-      {children}
-      <div>Back to the top here</div>
+      <Styled.MainContainer>
+        <Styled.BackButtonContainer>
+          {" "}
+          <Button
+            label="back"
+            onClick={() => router.back()}
+            iconUrl={"/icons/backArrow.png"}
+          />
+        </Styled.BackButtonContainer>
+        {children}
+        <div>
+          {" "}
+          <Button
+            label="back to top"
+            onClick={() => {
+              return;
+            }}
+          />
+        </div>
+      </Styled.MainContainer>
       <Footer />
-    </div>
+    </Styled.Main>
   );
 };
 

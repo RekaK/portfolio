@@ -1,4 +1,4 @@
-import { Styled } from "../../templates/MainTemplate.styles";
+import { Styled } from "../../templates/styles/MainTemplate.styles";
 import { ICard } from "../../ui/Card";
 import Section, { ICardSection } from "../../ui/Section";
 

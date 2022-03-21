@@ -6,6 +6,7 @@ const NavContainer = styled.nav({
   height: "100px",
   paddingLeft: "48px",
   paddingTop: "42px",
+  backgroundColor: colors.pink
 });
 
 interface NavLinkStyleProps {

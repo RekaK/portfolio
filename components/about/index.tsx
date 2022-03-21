@@ -1,4 +1,4 @@
-import { Styled } from "../../templates/MainTemplate.styles";
+import { Styled } from "../../templates/styles/MainTemplate.styles";
 import Section from "../../ui/Section";
 
 const AboutContent = () => {

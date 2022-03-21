@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Styled } from "../../templates/MainTemplate.styles";
+import { Styled } from "../../templates/styles/MainTemplate.styles";
 import Button from "../../ui/Buttons/Button";
 import ImageGrid, { IImageObject } from "../../ui/ImageGrid";
 import Section from "../../ui/Section";
