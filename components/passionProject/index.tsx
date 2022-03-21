@@ -40,7 +40,7 @@ const PassionProjectContent: React.FC<PassionProjectContentProps> = ({
         />
         <ImageGrid
           images={imageGallery}
-          dimensions={{ height: 166, width: 265 }}
+          // dimensions={{ height: 166, width: 265 }}
         />
         <Footer />
       </Styled.MainContainer>

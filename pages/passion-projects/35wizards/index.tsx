@@ -2,17 +2,39 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import PassionProjectContent from "../../../components/passionProject";
 import MainTemplate from "../../../templates/MainTemplate";
+import { IImageObject } from "../../../ui/ImageGrid";
 
-const images = [
-  { url: "/wizards/wizards0.png", alt: "Notion board for 35Wizards" },
-  { url: "/wizards/wizards1.png", alt: "Database plan for 35Wizards Backend" },
-  { url: "/wizards/wizards2.png", alt: "Logical flow of 35Wizards" },
-  { url: "/wizards/wizards3.png", alt: "Button states" },
+const images: IImageObject[] = [
+  {
+    url: "/wizards/wizards0.png",
+    alt: "Notion board for 35Wizards",
+    dimensions: { height: 166, width: 265 },
+  },
+  {
+    url: "/wizards/wizards1.png",
+    alt: "Database plan for 35Wizards Backend",
+    dimensions: { height: 166, width: 265 },
+  },
+  {
+    url: "/wizards/wizards2.png",
+    alt: "Logical flow of 35Wizards",
+    dimensions: { height: 166, width: 265 },
+  },
+  {
+    url: "/wizards/wizards3.png",
+    alt: "Button states",
+    dimensions: { height: 166, width: 265 },
+  },
   {
     url: "/wizards/wizards4.png",
     alt: "Wireframe for character sheet management",
+    dimensions: { height: 166, width: 265 },
   },
-  { url: "/wizards/wizards5.png", alt: "Diagram of D&D 3.5 ruleset" },
+  {
+    url: "/wizards/wizards5.png",
+    alt: "Diagram of D&D 3.5 ruleset",
+    dimensions: { height: 166, width: 265 },
+  },
 ];
 
 const About: NextPage = () => {
