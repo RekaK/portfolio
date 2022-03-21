@@ -1,9 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import PassionProjectContent from "../../../components/passionProject";
-import MainTemplate from "../../../templates/MainTemplate";
 import ProjectTemplate from "../../../templates/ProjectTemplate";
-import { IImageObject } from "../../../ui/ImageGrid";
 
 const Shine: NextPage = () => {
 
@@ -15,7 +12,7 @@ const Shine: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ProjectTemplate></ProjectTemplate>
+      <ProjectTemplate title={`Redesigning "Shine"`}></ProjectTemplate>
     </div>
   );
 };

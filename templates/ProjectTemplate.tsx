@@ -1,10 +1,22 @@
 import { useRouter } from "next/router";
-import Footer from "../components/footer";
 import Nav from "../components/nav";
 import Button from "../ui/Buttons/Button";
 import { Styled } from "./styles/ProjectTemplate.styles";
 
-const ProjectTemplate: React.FC = ({ children }) => {
+interface ISubtitleItem {
+  icon: string;
+  text: string;
+}
+interface ProjectTemplateProps {
+  title: string;
+  subtitles?: ISubtitleItem[];
+}
+
+const ProjectTemplate: React.FC<ProjectTemplateProps> = ({
+  children,
+  title,
+  subtitles,
+}) => {
   const router = useRouter();
 
   return (
@@ -19,6 +31,16 @@ const ProjectTemplate: React.FC = ({ children }) => {
             iconUrl={"/icons/backArrow.png"}
           />
         </Styled.BackButtonContainer>
+        <Styled.TitleContainer>
+          <Styled.ProjectTitle>{title}</Styled.ProjectTitle>
+          {subtitles &&
+            subtitles.length > 0 &&
+            subtitles.map((subtitle) => (
+              <Styled.SubtitleItem key={subtitle.text}>
+                <Styled.Subtitle>{subtitle.text}</Styled.Subtitle>
+              </Styled.SubtitleItem>
+            ))}
+        </Styled.TitleContainer>
         {children}
         <div>
           {" "}

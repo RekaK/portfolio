@@ -11,7 +11,7 @@ const KubikData: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ProjectTemplate></ProjectTemplate>
+      <ProjectTemplate title="UX at Kubik Data"></ProjectTemplate>
     </div>
   );
 };

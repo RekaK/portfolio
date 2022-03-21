@@ -16,19 +16,42 @@ const MainContainer = styled.div({
 });
 
 const BackButtonContainer = styled.div({
-  margin: "40px 0",
+  marginTop: "40px",
 });
 
 const ProjectFooter = styled.footer({
   width: "100%",
   height: "44px",
-  backgroundColor: colors.pink
+  backgroundColor: colors.pink,
 });
+
+const TitleContainer = styled.header({
+  marginBottom: "80px",
+});
+
+const ProjectTitle = styled.h1({
+  textAlign: "center",
+  fontFamily: "Bebas Neue, sans-serif",
+  fontSize: "60px",
+  lineHeight: "72px",
+  letterSpacing: "6%",
+  fontWeight: 400,
+  color: colors.darkBlue,
+  marginBottom: "8px",
+});
+
+const SubtitleItem = styled.div({});
+
+const Subtitle = styled.span({});
 
 export const Styled = {
   ProjectTemplate,
   Main,
   MainContainer,
   BackButtonContainer,
-  ProjectFooter
+  ProjectFooter,
+  ProjectTitle,
+  TitleContainer,
+  SubtitleItem,
+  Subtitle,
 };
