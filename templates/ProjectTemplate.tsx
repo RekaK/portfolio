@@ -30,7 +30,7 @@ const ProjectTemplate: React.FC = ({ children }) => {
           />
         </div>
       </Styled.MainContainer>
-      <Footer />
+      <Styled.ProjectFooter />
     </Styled.Main>
   );
 };
